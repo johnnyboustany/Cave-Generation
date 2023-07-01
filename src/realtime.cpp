@@ -10,8 +10,6 @@
 #include <string>
 #include <glm/gtx/string_cast.hpp>
 
-// ================== Project 5: Lights, Camera
-
 RenderData renderData;
 
 Realtime::Realtime(QWidget *parent)
@@ -28,14 +26,12 @@ Realtime::Realtime(QWidget *parent)
     m_keyMap[Qt::Key_Control] = false;
     m_keyMap[Qt::Key_Space]   = false;
 
-    // If you must use this function, do not edit anything above this
 }
 
 void Realtime::finish() {
     killTimer(m_timer);
     this->makeCurrent();
 
-    // Students: anything requiring OpenGL calls when the program exits should be done here
     glDeleteBuffers(1,&m_vbo);
     glDeleteVertexArrays(1,&m_vao);
 
@@ -44,7 +40,6 @@ void Realtime::finish() {
     this->doneCurrent();
 }
 
-// Self-made function
 void Realtime::updateShapes() {
     m_cube = Cube();
     m_cube.updateParams(2);
@@ -82,7 +77,6 @@ void Realtime::initializeGL() {
     // Tells OpenGL how big the screen is
     glViewport(0, 0, size().width() * m_devicePixelRatio, size().height() * m_devicePixelRatio);
 
-    // Students: anything requiring OpenGL calls when the program starts should be done here
     m_shader = ShaderLoader::createShaderProgram(":/resources/shaders/default.vert",
                                                  ":/resources/shaders/default.frag");
 
@@ -106,11 +100,6 @@ void Realtime::initializeGL() {
     glUseProgram(0);
 
 
-
-    // Task 11: Fix this "fullscreen" quad's vertex data
-
-    // Task 12: Play around with different values!
-    // Task 13: Add UV coordinates
     std::vector<GLfloat> fullscreen_quad_data =
     { //     POSITIONS    //
         -1.f, 1.f, 0.0f,
@@ -172,7 +161,6 @@ void Realtime::DepthMappingFBO(){
     glTexParameterfv(GL_TEXTURE_2D, GL_TEXTURE_BORDER_COLOR, borderColor);
 
     glBindTexture(GL_TEXTURE_2D, 0);
-
 
 
     // Set the texture.frag uniform for our texture
@@ -241,8 +229,6 @@ void Realtime::loadLights() {
 
 
     float near_plane = 1.0f, far_plane = 7.5f;
-
-   // glm::vec3 lightInvDir = glm::vec3(0.5f,2,2);
     glm::vec3 lightInvDir = renderData.lights[0].dir;
 
      // Compute the MVP matrix from the light's point of view
@@ -273,13 +259,9 @@ void Realtime::loadLights() {
         std::string arg_7 = "m_penumbra[" + std::to_string(i) + "]";
         GLint light_penumbra_loc = glGetUniformLocation(m_shader,arg_7.data());
 
-<<<<<<< HEAD
-=======
 
         float near_plane = 1.0f, far_plane = 7.5f;
 
-       // glm::vec3 lightInvDir = glm::vec3(0.5f,2,2);
-        //glm::vec3 lightInvDir = glm::vec3(-2.0f, 4.0f, -1.0f);
         glm::vec3 lightInvDir = glm::vec3(renderData.lights[0].dir);
 
          // Compute the MVP matrix from the light's point of view
@@ -292,8 +274,6 @@ void Realtime::loadLights() {
         GLint loc8 = glGetUniformLocation(m_shader, lightMatrixStr.c_str());
         glUniformMatrix4fv(loc8, 1, GL_FALSE, &lightSpaceMatrix[0][0]);
 
-
->>>>>>> 96791e15a4afc1a745c98a6d16b5ae4228deb8bf
         if (light.type == LightType::LIGHT_DIRECTIONAL) {
             glUniform1i(light_type_loc, 0);
         } else if (light.type == LightType::LIGHT_POINT) {
@@ -372,13 +352,7 @@ void Realtime::renderZBuffer(){
         // Pass model matrix to shader program
         // Pass view and projection matrices
 
-<<<<<<< HEAD
         glm::vec3 lightInvDir = renderData.lights[0].dir;
-=======
-        //glm::vec3 lightInvDir = glm::vec3(-2.0f, 4.0f, -1.0f);
-        glm::vec3 lightInvDir = glm::vec3(renderData.lights[0].dir);
->>>>>>> 96791e15a4afc1a745c98a6d16b5ae4228deb8bf
-
         float near_plane = 1.0f, far_plane = 7.5f;
 
          // Compute the MVP matrix from the light's point of view
@@ -495,7 +469,6 @@ void Realtime::settingsChanged() {
     update(); // asks for a PaintGL() call to occur
 }
 
-// ================== Project 6: Action!
 
 glm::mat4 rotation_matrix(float theta, glm::vec3 axis) {
     float sin_t = glm::sin(theta);
@@ -664,11 +637,9 @@ void Realtime::timerEvent(QTimerEvent *event) {
     }
     /* Testing Bezier (can delete later) */
     else if (m_keyMap[Qt::Key_F]) {
-        //m_bezier.updatePos(glm::vec4(-6.0, 4.0, 4.0, 1.0), glm::vec4(-4.0, 5.0, 4.0, 1.0), glm::vec4(-2.0, 5.0, 4.0, 1.0), glm::vec4(0.0, 1.0, 0.0, 1.0), m_bezierInc);
         m_bezier.updatePos(point_1, point_2, point_3, point_4, m_bezierInc);
         m_bezierInc += 0.0012;
     }
-    /* Testing Bezier (can delete later) */
 
     update(); // asks for a PaintGL() call to occur
 }

@@ -18,15 +18,7 @@ void Bezier::updatePos(glm::vec3 p1, glm::vec4 p2, glm::vec4 p3, glm::vec4 p4, f
     float lookX = 3*xCoeffs[0]*pow(t, 2) + 2*xCoeffs[1]*t + xCoeffs[2];
     float lookY = 3*yCoeffs[0]*pow(t, 2) + 2*yCoeffs[1]*t + yCoeffs[2];
     float lookZ = 3*zCoeffs[0]*pow(t, 2) + 2*zCoeffs[1]*t + zCoeffs[2];
-//    float upX = 6*xCoeffs[0]*t + 2*xCoeffs[1];
-//    float upY = 6*yCoeffs[0]*t + 2*yCoeffs[1];
-//    float upZ = 6*zCoeffs[0]*t + 2*zCoeffs[1];
     m_cameraData->pos = glm::vec4(newX, newY, newZ, 1.0);
     m_cameraData->look = glm::normalize(glm::vec4(lookX, lookY, lookZ, 0.0f));
-//    if (t > 0.5) {
-//        m_cameraData->up = glm::normalize(glm::vec4(-upX, -upY, -upZ, 0.0f));
-//    } else {
-//        m_cameraData->up = glm::normalize(glm::vec4(upX, upY, upZ, 0.0f));
-//    }
     m_cameraData->updateViewMatrix(m_cameraData->up, m_cameraData->look, m_cameraData->pos);
 }
