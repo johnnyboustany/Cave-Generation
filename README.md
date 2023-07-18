@@ -37,7 +37,7 @@ The Real-Time OpenGL Cave Scene Viewer is a visually stunning application that a
 
 1. Clone the project repository from GitHub:
 
-      git clone https://github.com/johnnyboustany/cave-generation.git
+                 git clone https://github.com/johnnyboustany/cave-generation.git
 
 2. Navigate to the project directory:
       cd cave-generation
