@@ -40,12 +40,13 @@ The Real-Time OpenGL Cave Scene Viewer is a visually stunning application that a
         git clone https://github.com/johnnyboustany/cave-generation.git
 
 2. Navigate to the project directory:
-          cd cave-generation
 
-3. Install the necessary dependencies (OpenGL, GLFW, etc.).
+       cd cave-generation
+
+4. Install the necessary dependencies (OpenGL, GLFW, etc.).
     
 
-4. Build the project using your preferred build system (e.g., CMake, Make, etc.).
+5. Build the project using your preferred build system (e.g., CMake, Make, etc.).
 
         Replace `johnnyboustany` with your GitHub username in the installation instructions. This README.md file only includes the installation section with the added instruction "Navigate to the project directory:".
 
