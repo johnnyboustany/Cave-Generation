@@ -17,7 +17,7 @@ This project is a real-time OpenGL scene viewer designed to showcase an interact
 <!-- * [License](#license) -->
 
 ## Technologies Used
-Java, JavaScript, React, SQL, Node.js
+C++, OpenGL
 
 ## General Info
 
