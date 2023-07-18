@@ -32,7 +32,7 @@ The Real-Time OpenGL Cave Scene Viewer is a visually stunning application that a
 - Adjustable settings for scene and rendering customization.
 
 <p align="center">
-    <img src="./assets/shadowmapping1.png" height=200 alt="">
+    <img src="./assets/shadowmapping1.png" height=400 alt="">
     <br>
     above: shows the shadow mapping outside the cave.
 </p>
