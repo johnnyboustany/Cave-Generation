@@ -3,7 +3,7 @@
 This project is a real-time OpenGL scene viewer designed to showcase an interactive cave scene composed of an impressive 16,050 cubes. It also includes an efficient implementation of shadow mapping for all shadow-casting objects, with optimized edge smoothness achieved through Percentage-Closer Filtering (PCF), leading to a 75% improvement in visual quality.
 
 <p align="center">
-    <img src="./assets/typeically.png" alt="" width="1000">
+    <img src="./assets/cavebanner.png" alt="" width="1000">
 </p>
 
 ## Table of Contents
