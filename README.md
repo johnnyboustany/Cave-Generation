@@ -39,7 +39,7 @@ To optimize shadow quality, we use Percentage-Closer Filtering (PCF). This techn
 <p align="center">
     <img src="./assets/shadowmapping1.png" height=400 alt="">
     <br>
-    above: shows the shadow mapping outside the cave.
+    above: shows the shadow mapping inside the cave.
 </p>
 
 <br>
@@ -47,7 +47,7 @@ To optimize shadow quality, we use Percentage-Closer Filtering (PCF). This techn
 <p align="center">
     <img src="./assets/shadowmapping2.png" height=400 alt="">
     <br>
-    above: shows the shadow mapping inside the cave.
+    above: shows the shadow mapping outside the cave.
 </p>
 
 ## Usage Instructions
