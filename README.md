@@ -1,8 +1,6 @@
 # Cave Generation
 
-Typeically is a web-based typing app that allows you to find your favorite songs and type along to the lyrics! I created & developed this app alongside four classmates for my Spring 2022 Software Engineering course.
-
-*The web application is no longer live as the course has finished since. However, demos are included below.*
+This project is a real-time OpenGL scene viewer designed to showcase an interactive cave scene composed of an impressive 16,050 cubes. It also includes an efficient implementation of shadow mapping for all shadow-casting objects, with optimized edge smoothness achieved through Percentage-Closer Filtering (PCF), leading to a 75% improvement in visual quality.
 
 <p align="center">
     <img src="./assets/typeically.png" alt="" width="1000">
@@ -11,9 +9,7 @@ Typeically is a web-based typing app that allows you to find your favorite songs
 ## Table of Contents
 * [Technologies Used](#technologies-used)
 * [General Info](#general-info)
-* [Features and Demos](#features-and-demos)
-* [Design Iterations](#design-iterations)
-* [Testing](#testing)
+* [Features](#features)
 * [Usage Instructions](#usage-instructions)
 * [Project Status](#project-status)
 * [Conclusion](#conclusion)
@@ -25,83 +21,42 @@ Java, JavaScript, React, SQL, Node.js
 
 ## General Info
 
-This project aims to provide entertainment in the form of a typing game that allows you to type along to user selected lyrics. There is currently no application that allows users to type along to lyrics of a song that they inputted, and so our project aims to fulfill the want for such an application.
+The Real-Time OpenGL Cave Scene Viewer is a visually stunning application that allows users to explore a highly interactive cave environment. It showcases the capabilities of real-time rendering and advanced techniques like shadow mapping and edge smoothing using PCF to achieve a more realistic and immersive experience.
 
-## Features and Demos
+## Features
 
-The following demos below showcase the app’s main features.
+- Real-time rendering of a cave scene with 16,050 cubes.
+- Interactive camera controls for user exploration.
+- Efficient shadow mapping for all shadow-casting objects.
+- 75% optimized edge smoothness through PCF.
+- Adjustable settings for scene and rendering customization.
 
-### Demo of Search Bar & Typing:
-
-You can use the search bar to find a song by artist, song name, or lyric content, and hit 'enter' to generate song options. Once you've found the result for the song you wish to type to, click on it and you'll be directed to the typing page. Upon finishing the song, you will receive your typing stats, including words per minute, accuracy and typing duration. You will have the option to submit your score to that song's specific leaderboard! You've got to be quick—only the top 5 completion times are displayed on the leaderboard!
-
-<p align="center">
-    <img src="./assets/type-demo.gif" alt="A user searches for a song and types to it, and their typing statistics and place in the leaderboard appear at the end.">
-</p>
-
-### Demo of New Releases Feature:
-
-You can also choose a song from the list of new releases. In addition, you can toggle the song length and censorship of explicit lyrics using the switches at the top-right of the screen. Return back to the song search page by clicking the Typeically header at the top left of the page.
-
-<p align="center">
-    <img src="./assets/type-demo2.gif" alt="A user toggles the shorten and censor options in the top-right corner and chooses a newly released song.">
-</p>
-
-## Design Iterations
-
-The backend was developed using Java and fulfilled two main purposes: (1) retrieving the Spotify API data to load a list of newly released songs on the frontend and (2) storing the submissions to the leaderboard in an SQL file. I developed API Handlers to update the frontend with both forms of data.
-
-A new table in the SQL database file is created for each song and is continuously updated with the user’s submissions. Only the 5 top submissions are displayed on the Frontend. The frontend communicates with the backend so that the tables in the database are up to date. On the frontend side of the app, the search bar feature was implemented using the Genius API, which provided us with search query results, song lyrics and song artwork.
-
-There are some trade-offs with the design choices made: if the APIs break, then the application will no longer functional. However, it is not feasible to hold all this information in the backend. In addition, song information needs to be continuously updated with new data.
-
-## Testing
-
-The backend was tested with JUnit tests that targeted the API Handlers. The frontend was tested using Selenium to verify that all features of the app work in conjunction.
-     
 ## Usage Instructions
 
-### To run the Typeically program:
-    
-1. Preferably use Chrome for your browser and download the [CORS UnBlock extension](https://docs.google.com/document/d/1kAGzs_0YeLkAXbZUFNlNNj2SrcmW8tcc3CuH0Uy6cQ8/edit#heading=h.iiwoysfq2rkn). Activate it by making sure the yellow light on the bug icon is visible.
+### To run the Cave Scene Viewer, follow these steps:
 
-2. In one terminal:
-```
-cd frontend    
-cd type-client
-npm start
-```
-3. In another terminal:
-```    
-cd backend
-./run --gui
-```
-### To test the Typeically program:
+1. Clone the project repository from GitHub:
+
+      git clone https://github.com/johnnyboustany/cave-generation.git
+
+2. Navigate to the project directory:
+      cd cave-generation
+
+3. Install the necessary dependencies (OpenGL, GLFW, etc.).
     
-Run the Junit and Selenium tests using:
-```
-cd backend
-mvn test
-```
-*IMPORTANT:*
-- Make sure you activate the CORS UnBlock extension in the browser when the selenium tabs open
-- No need to download the extension for testing, it is preloaded.
+
+4. Build the project using your preferred build system (e.g., CMake, Make, etc.).
+
+        Replace `johnnyboustany` with your GitHub username in the installation instructions. This README.md file only includes the installation section with the added instruction "Navigate to the project directory:".
+
 
 ## Project Status
-Project is: Complete (as of May 2022)
-
-## Conclusion
-
-I learned a lot about the software engineering cycle in general and realized how much I enjoyed working with both frontend and backend concurrently.
+Project is: Complete (as of December 2022)
 
 ## Contributions
 
  I specifically worked on:
-- the backend and frontend (React) aspects of the leaderboard, including setting up APIs to ensure the leaderboard is updated
-- testing the leaderboard database from the backend by writing the JUnit tests
-- the API handler to send the list of newly-released songs from Spotify to the frontend
-- the frontend “choose a newly-released song” feature which allows users to choose a recent song
-- testing all aspects of the frontend with Selenium
-- helping my group members integrate their parts and making sure merges go smoothly
+- the shadow mapping
+- pcf
 
 My group members: @coltonrusch, @mohammedakel, @JAnagonye, @glet2024, @mstephe7
