@@ -1,6 +1,8 @@
 # Cave Generation
 
-This project is a real-time OpenGL scene viewer designed to showcase an interactive cave scene composed of an impressive 16,050 cubes. It also includes an efficient implementation of shadow mapping for all shadow-casting objects, with optimized edge smoothness achieved through Percentage-Closer Filtering (PCF), leading to a 75% improvement in visual quality.
+I created & developed this project alongside three classmates for my Fall 2022 Computer Graphics course. It includes a real-time OpenGL scene viewer designed to showcase an interactive cave scene that we generated using 16,050 cubes and a technqiue known as "perlin worms."
+
+*You can run the program and explore the cave and the various features we implemented using the GUI.*
 
 <p align="center">
     <img src="./assets/cavebanner.png" alt="" width="1000">
@@ -21,15 +23,17 @@ C++, OpenGL
 
 ## General Info
 
-The Real-Time OpenGL Cave Scene Viewer is a visually stunning application that allows users to explore a highly interactive cave environment. It showcases the capabilities of real-time rendering and advanced techniques like shadow mapping and edge smoothing using PCF to achieve a more realistic and immersive experience.
+The Real-Time OpenGL Cave Scene Viewer is a visually stunning application that allows users to explore a highly interactive cave environment. The cave was generated using a method of procedural terrain generation using Perlin noise. Caves are carved out by spheres that have their radius and position affected by perlin noise. This project showcases the capabilities of real-time rendering and advanced techniques like shadow mapping and edge smoothing using PCF to achieve a more realistic and immersive experience.
 
 ## Features
 
-- Real-time rendering of a cave scene with 16,050 cubes.
-- Interactive camera controls for user exploration.
-- Efficient shadow mapping for all shadow-casting objects.
-- 75% optimized edge smoothness through PCF.
-- Adjustable settings for scene and rendering customization.
+The GUI shown below allows you to change 2 parameters: radius and seed. Users can increase the size of the cave by opting for a greater radius or they can generate more complex caves by increasing the seed parameter.
+
+W for forward, S for backwards, A for left, D for right, space for up, command for down
+
+press F to go through bezier curve.
+
+Toggle shadows.
 
 <p align="center">
     <img src="./assets/shadowmapping1.png" height=400 alt="">
@@ -67,8 +71,6 @@ Project is: Complete (as of December 2022)
 
 ## Contributions
 
- I specifically worked on:
-- the shadow mapping
-- pcf
-
-My group members: @coltonrusch, @mohammedakel, @JAnagonye, @glet2024, @mstephe7
+ I specifically worked on the texture, shadow mapping and PCF.
+ 
+My group members: Troy Conklin, Nicholas Fah-Sang, Jared Cambier 
