@@ -14,7 +14,6 @@ I created & developed this project alongside three classmates for my Fall 2022 C
 * [Features](#features)
 * [Usage Instructions](#usage-instructions)
 * [Project Status](#project-status)
-* [Conclusion](#conclusion)
 * [Contributions](#contributions)
 <!-- * [License](#license) -->
 
