@@ -31,6 +31,20 @@ The Real-Time OpenGL Cave Scene Viewer is a visually stunning application that a
 - 75% optimized edge smoothness through PCF.
 - Adjustable settings for scene and rendering customization.
 
+<p align="center">
+    <img src="./assets/shadowmapping1.png" height=200 alt="">
+    <br>
+    above: shows the shadow mapping outside the cave.
+</p>
+
+<br>
+
+<p align="center">
+    <img src="./assets/shadowmapping2.png" height=400 alt="">
+    <br>
+    above: shows the shadow mapping inside the cave.
+</p>
+
 ## Usage Instructions
 
 ### To run the Cave Scene Viewer, follow these steps:
@@ -45,11 +59,8 @@ The Real-Time OpenGL Cave Scene Viewer is a visually stunning application that a
 
 4. Install the necessary dependencies (OpenGL, GLFW, etc.).
     
-
-5. Build the project using your preferred build system (e.g., CMake, Make, etc.).
-
-        Replace `johnnyboustany` with your GitHub username in the installation instructions. This README.md file only includes the installation section with the added instruction "Navigate to the project directory:".
-
+5. Build the project using your preferred build system (e.g., CMake, Make, etc.)
+6. Run the code, which will make the GUI with the Cave Scene Viewer pop up
 
 ## Project Status
 Project is: Complete (as of December 2022)
