@@ -1,4 +1,4 @@
-# Cave Generation
+# Minecraft Cave Generation
 
 I created & developed this project alongside three classmates for my Fall 2022 Computer Graphics course. It includes a real-time OpenGL scene viewer designed to showcase an interactive cave scene that we generated using 16,050 cubes and an innovative technique known as "perlin worms."
 
